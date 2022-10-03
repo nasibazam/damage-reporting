@@ -12,36 +12,37 @@ export default function Home() {
       <h1>Damage Reporting Form</h1>
     </div>
     
-     <form className={formStyles.container}>
+    <div class={formStyles.container}>
+        <form>
+              <div class={formStyles.row}>
+                   <div class={formStyles.col-25}>
+                   <label>Description of Inciddent</label>
+                   </div>
+                   <div class={formStyles.col-75}>
+                   <input type='text' class={formStyles.a} placeholder='Write something..'/>
+                   </div>
+              </div>
+  
+              <div class={formStyles.row}>
+                    <div class={formStyles.col-25}>
+                    <label>Submitted by</label>
+                    </div>
+                    <div class={formStyles.col-75}>
+                    <input type='text' class={formStyles.b} placeholder='Your name..'/>
+                    </div>
+              </div>
 
-       <div className={formStyles.card}>
-           <label>Description of Inciddent</label>
-           <input 
-                type='text' 
-               placeholder='Add Description'
-               
-               />
-         </div>
-
-        <div className={formStyles.card} >
-            <label>Submitted by</label>
-            <input 
-                  type='text' 
-                  placeholder='Add your name and unit no.'
-                  
-                  />
-          </div>
-
-         <div>
-              <label>Tick the box to notify building manager</label>
-                <input type='checkbox'
-                      
-                       
-                        />
-           </div>
-
-           <input type='submit' value='Submit your application'/>
-     </form>
+              <br/>
+              <div>
+                    <label>Tick the box to notify building manager</label>
+                    <input type='checkbox' />
+               </div>
+              <br/>
+              <div class={formStyles.row}>
+                    <input type='submit' value='Submit your application' class={formStyles.btn}/>
+               </div>
+          </form>
+      </div>
     </>
  )
 }
